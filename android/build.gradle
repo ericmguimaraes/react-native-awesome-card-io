@@ -38,9 +38,12 @@ android {
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'io.card:android-sdk:5.5.1'
+    compile(name:'cardio-release-no-checksum', ext:'aar')
 }
